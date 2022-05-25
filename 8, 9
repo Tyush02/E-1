@@ -1,0 +1,25 @@
+#include<iostream>
+
+class MyClass
+{
+    std::string name = "Narek";                        // 8.
+    std::string surname = "Grigoryan";                     // 9.
+    int age = 18;
+    public:
+            void toString()
+            {
+                std::cout << "Name - " << name << "\nSurname - " << surname << "\nAge - " << age << std::endl;
+            }
+            ~MyClass()
+            {
+                std::cout << "...";
+            }
+};
+
+int main()
+{
+    MyClass a;
+    a.toString();
+
+    return 0;
+}
