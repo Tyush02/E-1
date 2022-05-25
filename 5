@@ -1,0 +1,23 @@
+#include<iostream>
+
+struct MyStruct
+{
+    int a;
+    int GetA()
+    {
+        return a;                                              // 5.
+    }
+    void SetA(int num)
+    {
+        a = num;
+    }
+};
+
+int main()
+{
+    int num;
+    std::cin >> num;
+    MyStruct b;
+    b.SetA(num);
+    std::cout << b.GetA();
+}
