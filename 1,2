@@ -1,0 +1,44 @@
+#include<iostream>
+
+/*struct MyStruct                          // 1.
+{
+    int ID;
+    std::string name;
+    int* data;
+    MyStruct(int size)
+    {
+        data = new int[size];
+        for(int i = 0; i < size; i++)
+        {
+            std::cout << "ID - ";
+            std::cin >> ID;
+            std::cout << "Name - ";
+            std::cin >> name;
+        }
+    }
+    ~MyStruct()
+    {
+        delete []data;
+    }
+};*/
+
+struct MyStruct1
+{
+    MyStruct1(int _id, std::string _name, int _age)
+    {
+        std::cout << _id << " " << _name << " " << _age;           // 2.
+    }
+};
+
+int main()
+{
+    int num, id, age;
+    std::string name;
+    //std::cin >> num;
+    //MyStruct a(num);
+    std::cin >> id >> age;
+    std::cin >> name;
+    MyStruct1(id, name, age);
+    
+    return 0;
+}
