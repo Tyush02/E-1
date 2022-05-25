@@ -1,0 +1,33 @@
+#include<iostream>
+
+struct MyStruct
+{
+    int id;                                         // 7.
+    std::string name;
+    MyStruct(int id, std::string name)
+    {
+        this -> id = id;
+        this -> name = name;
+    }
+    MyStruct &operator=(const MyStruct &oth)
+    {
+        this -> id = oth.id;
+        this -> name = oth.name;
+        return *this;
+    }
+};
+
+int main()
+{
+    int id, id2;
+    std::string name, name2;
+    std::cin >> id;
+    std::cin >> name;
+    std::cin >> id2;
+    std::cin >> name2;
+    MyStruct a(id, name);
+    MyStruct b(id2, name2);  
+    b = a;                 
+
+    return 0;
+}
